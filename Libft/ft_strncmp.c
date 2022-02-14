@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 20:09:28 by cupatham          #+#    #+#             */
-/*   Updated: 2022/02/14 20:24:47 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/02/15 04:26:06 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 	}
 	if (n == 0)
 		return (0);
-	return (*(unsigned char*)s1 - *(unsigned char*)s2);
+	return (*(unsigned char *)s1 - *(unsigned char *)s2);
 }
