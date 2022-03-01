@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 20:17:35 by cupatham          #+#    #+#             */
-/*   Updated: 2022/02/15 05:37:38 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/03/01 15:52:11 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,6 +31,12 @@
 
 # define INT_MAX 2147483647
 # define INT_MIN -2147483648
+
+# define CHECK_PTR_DEF(ptr, def) if (!(ptr)) return (def);
+# define CHECK_PTR(ptr) CHECK_PTR_DEF(ptr, NULL);
+# define CHECK_PTR_EMPTY(ptr) if (!(ptr)) return ;
+
+# define CHECK_MALLOC(var, size) CHECK_PTR((var = malloc(size)))
 
 typedef struct	s_list
 {
@@ -83,7 +89,7 @@ size_t	ft_strlen(const char *s);
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strnstr(const char *haystack, const char *needle,
+char	*ft_strnstr(const char *mo, const char *moz,
 						size_t len);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strtrim(char const *s1, char const *set);
@@ -91,5 +97,6 @@ char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 int	ft_tolower(int c);
 int	ft_toupper(int c);
+char	*ft_strstr(const char *mo, const char *moz);
 
 #endif
