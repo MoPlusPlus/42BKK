@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 20:17:35 by cupatham          #+#    #+#             */
-/*   Updated: 2022/03/01 15:52:11 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/03/01 17:06:53 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,12 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
-# include <stdbool.h>
 
-# define CKIN 0
-# define CKOUT 1
-# define CKERR 2
+# define IN 0
+# define OUT 1
+# define ERR 2
 
-# define WSPACE(c) (c==' '||c=='\t'||c=='\n'||c=='\r'||c=='\f'||c=='\v')
+# define IS_WSPACE(c) (c==' '||c=='\t'||c=='\n'||c=='\r'||c=='\f'||c=='\v')
 # define UCHAR unsigned char
 # define UINT unsigned int
 
@@ -35,7 +34,6 @@
 # define CHECK_PTR_DEF(ptr, def) if (!(ptr)) return (def);
 # define CHECK_PTR(ptr) CHECK_PTR_DEF(ptr, NULL);
 # define CHECK_PTR_EMPTY(ptr) if (!(ptr)) return ;
-
 # define CHECK_MALLOC(var, size) CHECK_PTR((var = malloc(size)))
 
 typedef struct	s_list

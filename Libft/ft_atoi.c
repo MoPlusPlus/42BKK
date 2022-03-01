@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 15:54:49 by cupatham          #+#    #+#             */
-/*   Updated: 2022/03/01 16:06:21 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/03/01 17:05:46 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_atoi(const char *str)
 	index = 0;
 	neg = 1;
 	res = 0;
-	while (WSPACE(str[index]))
+	while (IS_WSPACE(str[index]))
 		index++;
 	if (str[index] == '+' || str[index] == '-')
 		if (str[index++] == '-')
