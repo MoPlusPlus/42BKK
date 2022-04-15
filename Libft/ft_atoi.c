@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 15:54:49 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/16 00:30:40 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/16 00:56:44 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t	index;
-	int	neg;
+	size_t				index;
+	int					neg;
 	unsigned long int	res;
 
 	index = 0;
