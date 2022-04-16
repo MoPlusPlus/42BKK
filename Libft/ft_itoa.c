@@ -6,11 +6,12 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 13:56:40 by cupatham          #+#    #+#             */
-/*   Updated: 2022/03/01 14:23:50 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/16 13:07:49 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 static size_t	cal_num_size(long number)
 {

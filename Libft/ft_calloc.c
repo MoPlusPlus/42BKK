@@ -6,11 +6,12 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:06:32 by cupatham          #+#    #+#             */
-/*   Updated: 2022/03/01 16:09:26 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/16 13:07:37 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 void	*ft_calloc(size_t count, size_t size)
 {

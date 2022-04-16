@@ -6,12 +6,16 @@
 #    By: cupatham <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/01 16:20:14 by cupatham          #+#    #+#              #
-#    Updated: 2022/04/16 11:49:54 by cupatham         ###   ########.fr        #
+#    Updated: 2022/04/16 12:03:23 by cupatham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME	=   libft.a
-SRCS	=	ft_isalpha.c
+SRCS	=	ft_isalpha.c \ 
+				ft_isdigit.c \
+				ft_isalnum.c \
+				ft_isascii.c \
+				ft_isprint.c \
 OBJS	= $(SRCS:.c=.o)
 OBJS_B	= $(SRCS_B:.c=.o)
 RM		= rm -f
