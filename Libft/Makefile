@@ -6,14 +6,25 @@
 #    By: cupatham <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/01 16:20:14 by cupatham          #+#    #+#              #
-#    Updated: 2022/04/17 00:24:21 by cupatham         ###   ########.fr        #
+#    Updated: 2022/04/17 00:48:22 by cupatham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = 		ft_isalpha.c \
-			ft_isascii.c \
+SRCS = 		ft_memset.c \
+			ft_memcpy.c \
+			ft_memmove.c \
+			ft_memcmp.c \
+			ft_strlen.c \
+			ft_strrchr.c \
+			ft_strncmp.c \
+			ft_isalpha.c \
 			ft_isdigit.c \
+			ft_isalnum.c \
+			ft_isascii.c \
 			ft_isprint.c \
+			ft_toupper.c \
+			ft_tolower.c \
+			
 			
 NAME = libft.a
 
