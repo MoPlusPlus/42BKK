@@ -6,12 +6,11 @@
 #    By: cupatham <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/01 16:20:14 by cupatham          #+#    #+#              #
-#    Updated: 2022/04/16 23:41:53 by cupatham         ###   ########.fr        #
+#    Updated: 2022/04/16 23:49:19 by cupatham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-SRCS = ft_isalnum.c \
-			ft_isalpha.c \
+SRCS = 		ft_isalpha.c \
 			ft_isascii.c \
 			ft_isdigit.c \
 			ft_isprint.c \
