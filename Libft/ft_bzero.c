@@ -6,11 +6,12 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 14:44:52 by cupatham          #+#    #+#             */
-/*   Updated: 2022/03/01 14:50:09 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/16 11:24:41 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stddef.h>
 
 void	ft_bzero(void *s, size_t n)
 {
