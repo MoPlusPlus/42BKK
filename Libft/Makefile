@@ -6,7 +6,7 @@
 #    By: cupatham <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/01 16:20:14 by cupatham          #+#    #+#              #
-#    Updated: 2022/04/17 00:51:11 by cupatham         ###   ########.fr        #
+#    Updated: 2022/04/17 00:53:58 by cupatham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,15 +25,7 @@ SRCS = 		ft_memset.c \
 			ft_toupper.c \
 			ft_tolower.c \
 			
-SRCSB =	ft_lstnew.c			\
-		ft_lstadd_front.c	\
-		ft_lstsize.c		\
-		ft_lstlast.c		\
-		ft_lstadd_back.c	\
-		ft_lstclear.c		\
-		ft_lstdelone.c		\
-		ft_lstiter.c		\
-		ft_lstmap.c			\
+SRCSB =	ft_lstnew.c \
 		$(SRCS)
 			
 NAME = libft.a
