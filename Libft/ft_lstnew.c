@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/17 00:52:00 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/20 00:50:46 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/20 00:57:13 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 t_list	*ft_lstnew(void *content)
 {
-	t_list	*list;
+	t_list	*lst;
 
-	CHECK_MALLOC(list, sizeof(t_list));
-	list->content = content;
-	list->next = NULL;
-	return (list);
+	lst = malloc(sizeof(t_list));
+	if (!lst)
+		return (NULL);
+	lst->content = content;
+	lst->next = NULL;
+	return (lst);
 }
