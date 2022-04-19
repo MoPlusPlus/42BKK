@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:06:32 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/20 01:10:14 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/20 01:15:23 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,9 @@ void	*ft_calloc(size_t count, size_t size)
 
 	ptr = malloc(count * size);
 	if (ptr == NULL)
+	{
 		return (ptr);
+	}
 	ft_bzero(ptr, size * count);
 	return (ptr);
 }
