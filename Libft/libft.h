@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 20:17:35 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/17 00:16:27 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/20 00:50:36 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 # include <stddef.h>
 # include <unistd.h>
 # include <stdlib.h>
+
+# define CHECK_MALLOC(var, size) CHECK_PTR((var = malloc(size)))
 
 typedef struct s_list
 {
