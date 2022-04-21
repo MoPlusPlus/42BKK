@@ -6,53 +6,57 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 13:56:40 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/16 13:07:49 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 01:17:45 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stddef.h>
 
-static size_t	cal_num_size(long number)
+size_t	ft_get_len(int n)
 {
-	size_t	size;
+	size_t	len;
 
-	if (number < 0)
-		size = 1;
-	else
-		size = 0;
-	while (1)
+	len = 0;
+	while (n)
 	{
-		number /= 10;
-		size++;
-		if (number == 0)
-			break ;
+		n /= 10;
+		len++;
 	}
-	return (size);
+	return (len);
+}
+
+void	ft_build_str(size_t len, char *str, int n, int neg)
+{
+	str[len] = '\0';
+	while (len--)
+	{
+		str[len] = n % 10 + '0';
+		n = n / 10;
+	}
+	if (neg)
+		str[0] = '-';
 }
 
 char	*ft_itoa(int n)
 {
-	long	number;
-	char	*array;
-	size_t	size;
+	int		neg;
+	size_t	len;
+	char	*str;
 
-	number = n;
-	size = cal_num_size(n);
-	CHECK_MALLOC(array, (size + 1) * sizeof(char));
-	if (number < 0)
+	neg = 0;
+	if (n < 0)
 	{
-		array[0] = '-';
-		number *= -1;
+		neg = 1;
+		n *= -1;
 	}
-	array[size] = '\0';
-	while (1)
-	{
-		array[size - 1] = (number % 10) + '0';
-		number /= 10;
-		size--;
-		if (number == 0)
-			break ;
-	}
-	return (array);
+	if (n == 0)
+		return (ft_strdup("0"));
+	if (n == INT_MIN)
+		return (ft_strdup("-2147483648"));
+	len = ft_get_len(n) + neg;
+	str = (char *)malloc(sizeof(char) * len + 1);
+	if (!str)
+		return (0);
+	ft_build_str(len, str, n, neg);
+	return (str);
 }
