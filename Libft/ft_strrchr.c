@@ -6,14 +6,14 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 20:06:18 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/22 00:26:43 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 00:28:47 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-char	*ft_strrchr(const char *s, int	c)
+char	*ft_strrchr(const char *s, int c)
 {
 	int		i;
 	char	*str;
