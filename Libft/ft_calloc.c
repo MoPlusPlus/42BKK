@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:06:32 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/20 01:15:23 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 00:14:30 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,16 @@
 
 void	*ft_calloc(size_t count, size_t size)
 {
-	void	*ptr;
+	void			*mem;
+	size_t			i;
+	unsigned char	*temp;
 
-	ptr = malloc(count * size);
-	if (ptr == NULL)
-	{
-		return (ptr);
-	}
-	ft_bzero(ptr, size * count);
-	return (ptr);
+	mem = malloc(size * count);
+	if (!mem)
+		return (0);
+	temp = mem;
+	i = 0;
+	while (i++ < size * count)
+		*temp++ = 0;
+	return (mem);
 }
