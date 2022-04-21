@@ -6,29 +6,29 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 20:06:18 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/16 13:08:50 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 00:26:43 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-char	*ft_strrchr(const char *s, int c)
+char	*ft_strrchr(const char *s, int	c)
 {
-	size_t	index;
-	int		current;
-	char	*last;
+	int		i;
+	char	*str;
+	char	find;
 
-	index = 0;
-	last = NULL;
-	while (1)
+	str = (char *)s;
+	find = (char)c;
+	i = ft_strlen(str);
+	while (i > 0)
 	{
-		current = s[index];
-		if (current == c)
-			last = (char *)(s + index);
-		if (current == '\0')
-			break ;
-		index++;
+		if (str[i] == find)
+			return ((char *)str + i);
+		i--;
 	}
-	return (last);
+	if (str[i] == find)
+		return ((char *)str + i);
+	return (0);
 }
