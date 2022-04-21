@@ -6,43 +6,27 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 16:09:56 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/20 01:46:26 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 00:22:28 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdlib.h>
 
-int	ft_str_length(char *str);
-
-char	*ft_strdup(const char *src)
+char	*ft_strdup(const char	*str)
 {
-	int		i;
-	char	*dest;
-	int		sl;
+	char	*n_str;
+	size_t	i;
 
 	i = 0;
-	sl = ft_str_length(src);
-	dest = (char *)malloc(sl * sizeof(char));
-	if (dest == NULL)
-	{
-		return (dest);
-	}
-	while (src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-int	ft_str_length(char *str)
-{
-	int	i;
-
-	i = 0;
+	n_str = (char *)malloc(sizeof(char) * ft_strlen(str) + 1);
+	if (!n_str)
+		return (0);
 	while (str[i])
+	{
+		n_str[i] = str[i];
 		i++;
-	return (i);
+	}
+	n_str[i] = 0;
+	return (n_str);
 }
