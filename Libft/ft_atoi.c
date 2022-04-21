@@ -6,14 +6,14 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 15:54:49 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/22 00:33:31 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 00:34:52 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <limits.h>
 
-int	ft_isspace(char c)
+static int	ft_isspace(char c)
 {
 	if (c == ' ' || c == '\n' || c == '\t')
 		return (1);
@@ -23,7 +23,7 @@ int	ft_isspace(char c)
 		return (0);
 }
 
-int	ft_atoi(const char *str)
+int	ft_atoi(const char	*str)
 {
 	int				value;
 	unsigned int	n;
