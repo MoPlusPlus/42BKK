@@ -6,37 +6,31 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 15:39:04 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/16 13:08:45 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 00:36:07 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stddef.h>
 
-char	*ft_strnstr(const char *mo, const char *moz, size_t len)
+char	*ft_strnstr(const char	*str, const char	*to_find, size_t len)
 {
-	size_t	index;
-	size_t	yindex;
+	size_t	i;
+	size_t	j;
 
-	if (*moz == '\0')
-		return ((char *)mo);
-	if (len == 0)
-		return (NULL);
-	index = 0;
-	yindex = 0;
-	while (1)
+	i = 0;
+	if (*to_find == 0)
+		return ((char *)str);
+	while (str[i] && i < len)
 	{
-		if (moz[yindex == '\0'])
-			return ((char *)(mo + (index - yindex)));
-		if (mo[index] == moz[yindex])
-			yindex++;
-		else
+		j = 0;
+		while (str[i + j] == to_find[j] && (i + j) < len)
 		{
-			index -= yindex;
-			yindex = 0;
+			if (!to_find[j + 1])
+				return ((char *)str + i);
+			j++;
 		}
-		if (mo[index] == '\0' || index >= len)
-			return (NULL);
-		index++;
+		i++;
 	}
+	return (0);
 }
