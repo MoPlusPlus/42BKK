@@ -6,7 +6,7 @@
 #    By: cupatham <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/03/01 16:20:14 by cupatham          #+#    #+#              #
-#    Updated: 2022/04/22 01:28:09 by cupatham         ###   ########.fr        #
+#    Updated: 2022/04/22 01:28:41 by cupatham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -36,7 +36,6 @@ SRCS = ft_memset.c		\
 		ft_strdup.c
 
 SRCSB =	ft_lstnew.c			\
-
 		$(SRCS)
 
 
