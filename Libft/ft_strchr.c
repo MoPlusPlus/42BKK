@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/14 20:04:44 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/22 06:23:17 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/22 07:07:00 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strchr(const char *s, int c)
 {
 	while (*s)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 			return ((char *)s);
 		s++;
 	}

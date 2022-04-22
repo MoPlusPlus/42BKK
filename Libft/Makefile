@@ -6,7 +6,7 @@
 #    By: cupatham <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/04/22 01:38:36 by cupatham          #+#    #+#              #
-#    Updated: 2022/04/22 06:44:36 by cupatham         ###   ########.fr        #
+#    Updated: 2022/04/22 07:00:15 by cupatham         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,6 +40,7 @@ SRCS	=	ft_atoi.c \
 			ft_strmapi.c \
 			ft_strncmp.c \
 			ft_strnstr.c \
+			ft_striteri.c \
 			ft_strrchr.c \
 			ft_strtrim.c \
 			ft_substr.c \
