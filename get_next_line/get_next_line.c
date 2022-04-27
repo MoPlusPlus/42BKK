@@ -6,7 +6,7 @@
 /*   By: cupatham <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/27 13:13:51 by cupatham          #+#    #+#             */
-/*   Updated: 2022/04/27 17:10:49 by cupatham         ###   ########.fr       */
+/*   Updated: 2022/04/27 17:33:28 by cupatham         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,33 +53,3 @@ char	*get_next_line(int fd)
 	left_str = ft_new_left_str(left_str);
 	return (line);
 }
-
-// int	main(void)
-// {
-// 	char	*line;
-// 	int		i;
-// 	int		fd1;
-// 	int		fd2;
-// 	int		fd3;
-// 	fd1 = open("tests/test.txt", O_RDONLY);
-// 	fd2 = open("tests/test2.txt", O_RDONLY);
-// 	fd3 = open("tests/test3.txt", O_RDONLY);
-// 	i = 1;
-// 	while (i < 7)
-// 	{
-// 		line = get_next_line(fd1);
-// 		printf("line [%02d]: %s", i, line);
-// 		free(line);
-// 		line = get_next_line(fd2);
-// 		printf("line [%02d]: %s", i, line);
-// 		free(line);
-// 		line = get_next_line(fd3);
-// 		printf("line [%02d]: %s", i, line);
-// 		free(line);
-// 		i++;
-// 	}
-// 	close(fd1);
-// 	close(fd2);
-// 	close(fd3);
-// 	return (0);
-// }
